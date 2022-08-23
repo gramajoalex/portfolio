@@ -1,50 +1,91 @@
-.skills-section{
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    h2{
-        font-size: 65px;
-        font-family: Kouren-regular;
-        letter-spacing: 5px;
-        font-weight: 900;
-        color: $secondary;
+.skills-section {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  h2 {
+    font-size: 65px;
+    font-family: Kouren-regular;
+    letter-spacing: 5px;
+    font-weight: 900;
+    color: $secondary;
+  }
 
-    }
+  h3 {
+    font-size: 35px;
+    color: $tertiary;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
 
-    h3{
-        font-size: 35px;
-        color: $tertiary;
-        font-weight: 700;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-    }
-
-    p{
-        font-size: 22px;
-        margin: auto;
-    }
+  p {
+    font-size: 22px;
+    margin: auto;
+  }
 }
 
-.grid-container{
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    row-gap: 30px;
-    div{
-        width: 300px;
+.grid-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 180px;
+  //   gap: 30px;
+  animation: slide 8s alternate infinite linear;
+
+  div {
+    width: 300px;
+    img {
+      width: 150px;
+      height: 150px;
     }
+  }
 }
 
 @media screen and (max-width: 600px) {
-    h2{
-        font-size: 40px !important;
+  .grid-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    width: 95%;
+    height: 180px;
+    gap: 30px;
+    animation: slide 8s alternate infinite linear;
+
+    div {
+      width: 300px;
+      img {
+        width: 150px;
+        height: 150px;
+      }
     }
-    h3{
-        font-size: 30px !important;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0px);
     }
+    100% {
+      transform: translateX(-2100px);
+    }
+  }
+  h2 {
+    font-size: 40px !important;
+  }
+  h3 {
+    font-size: 30px !important;
+  }
 }

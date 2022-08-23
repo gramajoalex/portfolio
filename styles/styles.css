@@ -255,6 +255,7 @@ a {
     top: 0px;
   }
   .navbar .show-menu {
+    opacity: 1;
     margin: 0;
     position: absolute;
     top: 80px;
@@ -268,6 +269,24 @@ a {
     height: 300px;
     width: 100%;
     background-color: white;
+    -webkit-animation: showMenu 0.3s;
+            animation: showMenu 0.3s;
+  }
+  @-webkit-keyframes showMenu {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes showMenu {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
@@ -624,8 +643,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -633,14 +650,79 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  row-gap: 30px;
+  overflow: scroll;
 }
 
-.grid-container div {
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 180px;
+  -webkit-animation: slide 8s alternate infinite linear;
+          animation: slide 8s alternate infinite linear;
+}
+
+.slider div {
   width: 300px;
 }
 
+.slider div img {
+  width: 150px;
+  height: 150px;
+}
+
 @media screen and (max-width: 600px) {
+  .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  .slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 95%;
+    height: 180px;
+    gap: 30px;
+    -webkit-animation: slide 8s alternate infinite linear;
+            animation: slide 8s alternate infinite linear;
+  }
+  .slider div {
+    width: 300px;
+  }
+  .slider div img {
+    width: 150px;
+    height: 150px;
+  }
+  @-webkit-keyframes slide {
+    0% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    100% {
+      -webkit-transform: translateX(-2100px);
+              transform: translateX(-2100px);
+    }
+  }
+  @keyframes slide {
+    0% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    100% {
+      -webkit-transform: translateX(-2100px);
+              transform: translateX(-2100px);
+    }
+  }
   h2 {
     font-size: 40px !important;
   }
