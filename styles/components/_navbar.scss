@@ -9,8 +9,8 @@
   box-shadow: 0px 0px 28px 3px rgba(0, 0, 0, 0.118);
   z-index: 99;
 
-  div {
-      margin-right: 100px;
+  div:first-child {
+    margin-right: 100px;
   }
 
   a {
@@ -22,5 +22,78 @@
     letter-spacing: 0.3px;
     padding: 15px;
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    div:first-child {
+      display: none;
+      margin-right: 0;
+    }
+    .menu {
+      display: block;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      right: 30px;
+      // background-color: rgba(0, 0, 0, 0.177);
+      span {
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        top: 10px;
+        right: 0;
+        background-color: black;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 40px;
+          height: 4px;
+          background-color: black;
+        }
+
+        &::before {
+          top: 10px;
+        }
+
+        &::after {
+          top: 20px;
+        }
+      }
+    }
+
+    .close {
+      span {
+        position: absolute;
+        top: 18px;
+        right: 0px;
+        transform: rotate(45deg);
+        border-radius: 5px;
+
+        &::before {
+          top: 10px;
+          display: none;
+        }
+
+        &::after {
+          border-radius: 5px;
+          transform: rotate(-90deg);
+          top: 0px;
+        }
+      }
+    }
+
+    .show-menu {
+      margin: 0;
+      position: absolute;
+      top: 80px;
+      display: flex !important;
+      flex-direction: column;
+      height: 300px;
+      width: 100%;
+      background-color: white;
+    }
   }
 }

@@ -1,11 +1,13 @@
 .header {
   padding-top: 80px;
   height: 100vh;
+  min-height: 740px;
   width: 100%;
   background-color: $white;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   div {
     z-index: 10;
@@ -32,38 +34,106 @@
 }
 
 .icon1 {
-    // transform: rotate(random(40) + deg);
+  // transform: rotate(random(40) + deg);
   opacity: 0.4;
   top: 20%;
   left: 10%;
 }
 .icon2 {
-    // transform: rotate(-(random(40)) + deg);
+  // transform: rotate(-(random(40)) + deg);
   opacity: 0.4;
   top: 45%;
   left: 10%;
 }
 .icon3 {
-    // transform: rotate(random(40) + deg);
+  // transform: rotate(random(40) + deg);
   opacity: 0.4;
   top: 70%;
   left: 10%;
 }
 .icon4 {
-    // transform: rotate(-(random(40)) + deg);
+  // transform: rotate(-(random(40)) + deg);
   opacity: 0.4;
   top: 20%;
-  left: 78%;
+  left: 80%;
 }
 .icon5 {
-    // transform: rotate(random(40) + deg);
+  // transform: rotate(random(40) + deg);
   opacity: 0.4;
   top: 45%;
-  left: 78%;
+  left: 80%;
 }
 .icon6 {
-    // transform: rotate(-(random(40)) + deg);
+  // transform: rotate(-(random(40)) + deg);
   opacity: 0.4;
   top: 70%;
-  left: 78%;
+  left: 80%;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    padding-top: 80px;
+    height: 100vh;
+    width: 100%;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      background-color: rgba(255, 255, 255, 0.362);
+      img {
+        width: 500px;
+        max-width: 100%;
+      }
+    }
+    h1 {
+      font-size: 50px;
+      line-height: 70px;
+      text-align: center;
+      span {
+        color: $tertiary;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .icon1 {
+    top: 12%;
+    left: 20%;
+  }
+  .icon2 {
+    top: 12%;
+    left: 45%;
+  }
+  .icon3 {
+    top: 12%;
+    left: 70%;
+  }
+  .icon4 {
+    top: 82%;
+    left: 20%;
+  }
+  .icon5 {
+    top: 82%;
+    left: 45%;
+  }
+  .icon6 {
+    top: 82%;
+    left: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .icon-programming {
+    display: none;
+  }
+  .header {
+    height: 500px !important;
+    min-height: 550px;
+    h1 {
+      line-height: 40px;
+      font-size: 40px;
+    }
+  }
 }
