@@ -1,0 +1,90 @@
+.proyects-section {
+  min-height: 100vh;
+//   background-color: $secondary;
+  padding-top: 50px;
+  padding-bottom: 50px;
+//   margin-bottom: 30px;
+  padding-top: 100px;
+
+  h2 {
+    font-size: 65px;
+    font-family: Kouren-regular;
+    letter-spacing: 5px;
+    font-weight: 900;
+    color: $tertiary;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.proyects-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.proyects-card{
+    display: flex;
+    margin: auto;
+    background-color: darken($color: $white, $amount: 5);
+    padding: 10px;
+    border-radius: 5px;
+
+    // Image
+    div:first-child{
+        img{
+            height: 250px;
+            width: 270px;
+        }
+    }
+
+    // Data
+    .proyect-data{
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        padding: 30px;
+        h3{
+            font-size: 40px;
+            padding-bottom: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: $secondary;
+        }
+        p{
+            font-size: 20px;
+            line-height: 30px;
+            width: 600px;
+            color: $secondary;
+        }
+    }
+}
+
+.reverse{
+    flex-direction: row-reverse;
+    text-align: end;
+}
+
+.view-proyect{
+    padding: 20px 0px 0px 0px;
+    font-size: 18px;
+    a{
+        // background-color: $secondary;
+        border: solid 1px $tertiary;
+        padding: 10px;
+        border-radius: 5px;
+        margin-right: 5px;
+        font-weight: 900;
+        color: $tertiary;
+        transition: all .2s;
+
+        &:hover{
+            background-color: $tertiary;
+            color: $primary;
+        }
+    }
+}
+

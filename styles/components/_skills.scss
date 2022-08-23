@@ -1,0 +1,41 @@
+.skills-section{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    h2{
+        font-size: 65px;
+        font-family: Kouren-regular;
+        letter-spacing: 5px;
+        font-weight: 900;
+        color: $secondary;
+
+    }
+
+    h3{
+        font-size: 35px;
+        color: $tertiary;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    p{
+        font-size: 22px;
+        margin: auto;
+    }
+}
+
+.grid-container{
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    div{
+        width: 300px;
+    }
+}

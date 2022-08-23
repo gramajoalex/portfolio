@@ -1,0 +1,32 @@
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    height: 30vh;
+    font-size: 20px;
+    background-color: $secondary;
+    nav{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+
+        div{
+            display: flex;
+            gap: 20px;
+            text-transform: uppercase;
+        }
+        a{
+            font-size: 20px;
+            color: $white;
+        }
+    }
+
+    p > span{
+        color: $tertiary;
+    }
+    p{
+        color: $white;
+    }
+}
